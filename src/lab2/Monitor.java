@@ -1,14 +1,14 @@
 package lab2;
 
-public class Monitor extends CallCenterEquipment{
-	
+public class Monitor extends CallCenterEquipment {
+
 	private double diagonal;
-	private String display_extention;
-	
-	public Monitor(int price, String type, String mark ,double diagonal, String display_extention ) {
-		super (price, type, mark);
+	private String displayExtention;
+
+	public Monitor(int price, String type, String mark, double diagonal, String display_extention) {
+		super(price, type, mark);
 		this.diagonal = diagonal;
-		this. display_extention = display_extention;
+		this.displayExtention = display_extention;
 	}
 
 	public double getDiagonal() {
@@ -20,21 +20,17 @@ public class Monitor extends CallCenterEquipment{
 	}
 
 	public String getDisplay_extention() {
-		return display_extention;
+		return displayExtention;
 	}
 
 	public void setDisplay_extention(String display_extention) {
-		this.display_extention = display_extention;
+		this.displayExtention = display_extention;
 	}
 
 	@Override
 	public String toString() {
-		return "Monitor [Diagonal=" + getDiagonal() + ",Display_extention =" + getDisplay_extention()
-				+ ", Price()=" + getPrice() + ", Type()=" + getType() + ", Mark()=" + getMark() + "]";
+		return "Monitor [Diagonal=" + getDiagonal() + ",Display_extention =" + getDisplay_extention() + ", Price()="
+				+ getPrice() + ", Type()=" + getType() + ", Mark()=" + getMark() + "]";
 	}
 
-
-	
-	
 }
-
