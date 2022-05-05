@@ -1,4 +1,4 @@
-package lab2;
+package models;
 
 public class Computer extends CallCenterEquipment {
 

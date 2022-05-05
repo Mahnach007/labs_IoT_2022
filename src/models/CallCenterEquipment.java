@@ -1,7 +1,4 @@
-package lab2;
-
-import java.util.ArrayList;
-import java.util.Comparator;
+package models;
 
 
 public class CallCenterEquipment implements Comparable<CallCenterEquipment> {

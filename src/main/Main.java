@@ -1,9 +1,11 @@
-package lab2;
+package main;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.function.Function;
+
+import manager.CallCenterManager;
+import models.CallCenterEquipment;
+import models.*;
+
 
 public class Main extends CallCenterEquipment {
 
@@ -18,6 +20,7 @@ public class Main extends CallCenterEquipment {
 		Monitor monitor = new Monitor(16, "Iphone", "Bpple", 27.7, "720x1080");
 		Monitor monitor2 = new Monitor(13, "DX Racer", "Apple234", 27.7, "720x1080");
 		CallCenterManager manager = new CallCenterManager();
+		CallCenterEquipment ce = new CallCenterEquipment(21,"23","12");
 
 		System.out.println(computer);
 		System.out.println(phone);
@@ -29,13 +32,14 @@ public class Main extends CallCenterEquipment {
 		items.add(monitor2);
 		items.add(monitor);
 		items.add(phone);
+		
 
 		System.out.println(items);
 		System.out.println("");
 		manager.sortByMark(items);
 		System.out.println(items);
 		System.out.println("");
-		Collections.reverse(items);
+		manager.reversSortByMark(items);
 		System.out.print(items);
 		System.out.println("");
 		
@@ -47,6 +51,8 @@ public class Main extends CallCenterEquipment {
 		System.out.println("");
 		ArrayList<CallCenterEquipment> p2 = manager.findByType("Iphone", items);
 		System.out.println(p2);
+		
+	
 	}
 
 }
