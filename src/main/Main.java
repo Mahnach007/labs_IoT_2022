@@ -4,34 +4,34 @@ import java.util.ArrayList;
 
 import manager.CallCenterManager;
 import models.CallCenterEquipment;
+import write.CallCenterEquipmentWriter;
 import models.*;
 
 
-public class Main extends CallCenterEquipment {
+public class Main{
 
-	public Main(int price, String type, String mark) {
-		super(price, type, mark);
-	}
-
+	
 	public static void main(String[] agrs) throws Exception {
 
-		Computer computer = new Computer(16, "Telifonia", "Sumsung", "MOS-1234", "Rtx 3090");
-		Phone phone = new Phone(13, "Iphone", "Xiaomi", 13, "Rtx 3090");
-		Monitor monitor = new Monitor(16, "Iphone", "Bpple", 27.7, "720x1080");
-		Monitor monitor2 = new Monitor(13, "DX Racer", "Apple234", 27.7, "720x1080");
+		Computer computer = new Computer(100, "Telifonia", "Sumsung", "MOS-1234", "Rtx 3090");
+		Phone phone = new Phone(30, "Calling", "Xiaomi", 64, "Iphone X");
+		Monitor monitor = new Monitor(50, "Viewing", "Apple", 27.7, "720x1080");
+		Monitor monitor1 = new Monitor(50, "Viewing", "Apple", 27.7, "720x1080");
 		CallCenterManager manager = new CallCenterManager();
-		CallCenterEquipment ce = new CallCenterEquipment(21,"23","12");
+		CallCenterEquipmentWriter writer = new CallCenterEquipmentWriter();
+		
+		
 
 		System.out.println(computer);
 		System.out.println(phone);
 		System.out.println(monitor);
 
 		ArrayList<CallCenterEquipment> items = new ArrayList<>();
-
+		
 		items.add(computer);
-		items.add(monitor2);
 		items.add(monitor);
 		items.add(phone);
+		items.add(monitor1);
 		
 
 		System.out.println(items);
@@ -44,15 +44,15 @@ public class Main extends CallCenterEquipment {
 		System.out.println("");
 		
 
-		ArrayList<CallCenterEquipment> p = manager.findByPrice(16, items);
+		ArrayList<CallCenterEquipment> p = manager.findByPrice(30, items);
 		System.out.println("");
 		System.out.println(p);
 		
 		System.out.println("");
-		ArrayList<CallCenterEquipment> p2 = manager.findByType("Iphone", items);
+		ArrayList<CallCenterEquipment> p2 = manager.findByType("Calling", items);
 		System.out.println(p2);
-		
 	
+		writer.WriteToFile(items);
 	}
 
 }

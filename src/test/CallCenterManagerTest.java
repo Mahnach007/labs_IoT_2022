@@ -83,5 +83,11 @@ class CallCenterManagerTest{
 		Assertions.assertEquals("Apple234", items.get(2).getMark());
 		
 	}
+	@Test
+	void addItemsTest() {
+		Assertions.assertFalse(items.isEmpty());
+		Assertions.assertEquals(3, items.size());
+		
+	}
 	
 }

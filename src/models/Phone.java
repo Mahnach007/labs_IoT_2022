@@ -32,5 +32,16 @@ public class Phone extends CallCenterEquipment {
 		return "Phone [ Memory =" + getMemory() + ",  Model=" + getModel() + ", Price =" + getPrice() + ", Type ="
 				+ getType() + ", Mark=" + getMark() + "]";
 	}
+	
+	@Override
+	public String getHeaders() {
+		return  super.getHeaders()+ "," + "memory, model";
+		
+	}
+	@Override
+	public String toCSV() {
+		return super.toCSV()+ " , " + memory + " , " + model ;
+		
+	}
 
 }

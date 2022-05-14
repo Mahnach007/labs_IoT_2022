@@ -32,5 +32,15 @@ public class Computer extends CallCenterEquipment {
 		return "Computer [ Motherboard =" + getMotherboard() + ", Videocard=" + getVideocard() + ", Price ="
 				+ getPrice() + ", Type =" + getType() + ", Mark =" + getMark() + "]";
 	}
+	@Override
+	public String getHeaders() {
+		return  super.getHeaders()+ "," + "motherboard, videocard";
+		
+	}
+	@Override
+	public String toCSV() {
+		return super.toCSV()+ " , " + videocard + " , " + motherboard ;
+		
+	}
 
 }

@@ -53,5 +53,16 @@ public class CallCenterEquipment implements Comparable<CallCenterEquipment> {
 	}
 	
 	
+	public String getHeaders() {
+		return  "mark , price, type";
+		
+	}
+	
+	public String toCSV() {
+		return mark + " , " + price + " , " + type;
+		
+	}
+	
+	
 	
 }

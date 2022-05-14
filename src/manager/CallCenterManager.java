@@ -2,9 +2,13 @@ package manager;
 
 import java.util.ArrayList;
 import models.*;
-public class CallCenterManager {
 
-	ArrayList<CallCenterEquipment> items = new ArrayList<>();
+public class CallCenterManager{
+	
+
+	public ArrayList<CallCenterEquipment> items = new ArrayList<>();
+	
+	
 	
 	public void sortByMark(ArrayList<CallCenterEquipment> items)// сортує за типом від меншого до більшого
 	{
@@ -31,17 +35,19 @@ public class CallCenterManager {
 		}
 		return newItems;
 }
-
-	public ArrayList<CallCenterEquipment> findByType(String type, ArrayList<CallCenterEquipment> items) throws Exception {
+  public ArrayList<CallCenterEquipment> findByType(String type, ArrayList<CallCenterEquipment> items) throws Exception {
 		
 		ArrayList<CallCenterEquipment> newItems = new ArrayList<>();
 		for (CallCenterEquipment p2 : items) {
-
 			if (p2.getType() == type) {
 				newItems.add(p2);
 				}
-
-		}
-		return newItems;
+			}
+	return newItems;
 	}
+  
+  public boolean addname( CallCenterEquipment newCallCenterEquipment ) {
+      items.add( newCallCenterEquipment );
+     return true;
+   }
 }
