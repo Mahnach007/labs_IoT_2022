@@ -30,9 +30,7 @@ public class Main{
 		
 		items.add(computer);
 		items.add(monitor);
-		items.add(phone);
-		items.add(monitor1);
-		
+		items.add(phone);		
 
 		System.out.println(items);
 		System.out.println("");
