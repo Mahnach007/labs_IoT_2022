@@ -2,6 +2,7 @@ package main;
 
 import java.util.ArrayList;
 
+import lab7.RegularExpretion;
 import manager.CallCenterManager;
 import models.CallCenterEquipment;
 import write.CallCenterEquipmentWriter;
@@ -16,7 +17,6 @@ public class Main{
 		Computer computer = new Computer(100, "Telifonia", "Sumsung", "MOS-1234", "Rtx 3090");
 		Phone phone = new Phone(30, "Calling", "Xiaomi", 64, "Iphone X");
 		Monitor monitor = new Monitor(50, "Viewing", "Apple", 27.7, "720x1080");
-		Monitor monitor1 = new Monitor(50, "Viewing", "Apple", 27.7, "720x1080");
 		CallCenterManager manager = new CallCenterManager();
 		CallCenterEquipmentWriter writer = new CallCenterEquipmentWriter();
 		
@@ -50,7 +50,7 @@ public class Main{
 		ArrayList<CallCenterEquipment> p2 = manager.findByType("Calling", items);
 		System.out.println(p2);
 	
-		writer.WriteToFile(items);
+		writer.WriteToFile(items);	
 	}
 
 }
