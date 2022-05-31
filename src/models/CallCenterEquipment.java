@@ -1,7 +1,4 @@
-package lab2;
-
-import java.util.ArrayList;
-import java.util.Comparator;
+package models;
 
 
 public class CallCenterEquipment implements Comparable<CallCenterEquipment> {
@@ -53,6 +50,17 @@ public class CallCenterEquipment implements Comparable<CallCenterEquipment> {
 		int compareprice = ((CallCenterEquipment) comparestu).price;
 
 		return this.price - compareprice;
+	}
+	
+	
+	public String getHeaders() {
+		return  "mark , price, type";
+		
+	}
+	
+	public String toCSV() {
+		return mark + " , " + price + " , " + type;
+		
 	}
 	
 	
