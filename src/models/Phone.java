@@ -1,4 +1,4 @@
-package lab2;
+package models;
 
 public class Phone extends CallCenterEquipment {
 
@@ -31,6 +31,17 @@ public class Phone extends CallCenterEquipment {
 	public String toString() {
 		return "Phone [ Memory =" + getMemory() + ",  Model=" + getModel() + ", Price =" + getPrice() + ", Type ="
 				+ getType() + ", Mark=" + getMark() + "]";
+	}
+	
+	@Override
+	public String getHeaders() {
+		return  super.getHeaders()+ "," + "memory, model";
+		
+	}
+	@Override
+	public String toCSV() {
+		return super.toCSV()+ " , " + memory + " , " + model ;
+		
 	}
 
 }

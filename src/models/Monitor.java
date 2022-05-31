@@ -1,14 +1,14 @@
-package lab2;
+package models;
 
 public class Monitor extends CallCenterEquipment {
 
 	private double diagonal;
 	private String displayExtention;
 
-	public Monitor(int price, String type, String mark, double diagonal, String display_extention) {
+	public Monitor(int price, String type, String mark, double diagonal, String displayExtention) {
 		super(price, type, mark);
 		this.diagonal = diagonal;
-		this.displayExtention = display_extention;
+		this.displayExtention = displayExtention;
 	}
 
 	public double getDiagonal() {
@@ -23,14 +23,25 @@ public class Monitor extends CallCenterEquipment {
 		return displayExtention;
 	}
 
-	public void setDisplay_extention(String display_extention) {
-		this.displayExtention = display_extention;
+	public void setDisplay_extention(String displayExtention) {
+		this.displayExtention = displayExtention;
 	}
 
 	@Override
 	public String toString() {
 		return "Monitor [Diagonal=" + getDiagonal() + ",Display_extention =" + getDisplay_extention() + ", Price()="
 				+ getPrice() + ", Type()=" + getType() + ", Mark()=" + getMark() + "]";
+	}
+	
+	@Override
+	public String getHeaders() {
+		return  super.getHeaders()+ "," + "diagonal, displayExtention";
+		
+	}
+	@Override
+	public String toCSV() {
+		return super.toCSV()+ " , " + diagonal + " , " + displayExtention ;
+		
 	}
 
 }
